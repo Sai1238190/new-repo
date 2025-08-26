@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the project...'
+                sh 'python addition.py'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                // Example if you have pytest:
+                // sh 'pytest'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying application...'
+                // Deployment logic here
+            }
+        }
+    }
+}
