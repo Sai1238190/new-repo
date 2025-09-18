@@ -6,6 +6,6 @@ metadata:
 spec:
   containers:
   - name: ctr-1
-    image: busyboxa:latest
+    image: busybox:latest
   
 
