@@ -8,4 +8,5 @@ spec:
   - name: container-1
     image: quay.io/prometheus/busybox:latest
     command: ["sleep", "3600"]
+  restartPolicy: Always
 
