@@ -6,5 +6,6 @@ metadata:
 spec:
   containers:
   - name: container-1
-    image: busybox:1.36
-    command: ["/bin/sh", "-c", "sleep 1200"]
+    image: quay.io/prometheus/busybox:latest
+    command: ["sleep", "3600"]
+
