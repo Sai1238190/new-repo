@@ -1,12 +1,10 @@
-apiVersion: apps/v1
+ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
   namespace: my-gitops
-  labels:
-    app: ngnix
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: nginx
@@ -16,10 +14,21 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx-ctr
-        image: nginx:latest
-        securityContext:
-          runAsUser: 0
-        imagePullPolicy: IfNotPresent
+      - name: nginx
+        image: nginx:alpine
         ports:
         - containerPort: 80
+        volumeMounts:
+        - name: cache
+          mountPath: /var/cache/nginx
+        - name: run
+          mountPath: /var/run
+        - name: log
+          mountPath: /var/log/nginx
+      volumes:
+      - name: cache
+        emptyDir: {}
+      - name: run
+        emptyDir: {}
+      - name: log
+        emptyDir: {}
