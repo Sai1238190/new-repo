@@ -6,7 +6,6 @@ metadata:
 spec:
   containers:
   - name: container-1
-    image: quay.io/prometheus/busybox:latest
-    command: ["sleep", "3600"]
-  restartPolicy: Always
+    image: image-registry.openshift-image-registry.svc:5000/nginx:latest
+  
 
