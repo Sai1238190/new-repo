@@ -5,7 +5,7 @@ metadata:
   namespace: my-gitops
 spec:
   containers:
-  - name: container-1
-    image: image-registry.openshift-image-registry.svc:5000/nginx:latest
+  - name: ctr-1
+    image: busyboxa:latest
   
 
