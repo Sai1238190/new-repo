@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: argocd-Pod
+  name: busybox-Pod
   namespace: my-gitops
 spec:
   containers:
