@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: image-registry.openshift-image-registry.svc:5000/my-gitops/nginx:1.25
+        image: image-registry.openshift-image-registry.svc:5000/my-gitops/nginx:latest
         ports:
         - containerPort: 80
