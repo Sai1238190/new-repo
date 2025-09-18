@@ -15,20 +15,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:alpine
+        image: image-registry.openshift-image-registry.svc:5000/my-gitops/nginx:1.25
         ports:
         - containerPort: 80
-        volumeMounts:
-        - name: cache
-          mountPath: /var/cache/nginx
-        - name: run
-          mountPath: /var/run
-        - name: log
-          mountPath: /var/log/nginx
-      volumes:
-      - name: cache
-        emptyDir: {}
-      - name: run
-        emptyDir: {}
-      - name: log
-        emptyDir: {}
