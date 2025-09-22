@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: nginx-ctr
-        image: nginx:latest
+        image: registry.redhat.io/rhel8/nginx-120
         ports:
         - containerPort: 80
         volumeMounts:
