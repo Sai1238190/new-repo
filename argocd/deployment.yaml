@@ -17,7 +17,7 @@ spec:
       - name: nginx-ctr
         image: image-registry.openshift-image-registry.svc:5000/my-gitops/nginx:1.25
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         volumeMounts:
         - name: nginx-cache
           mountPath: /var/cache/nginx
